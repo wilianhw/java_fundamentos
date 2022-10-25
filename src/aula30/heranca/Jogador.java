@@ -1,4 +1,4 @@
-package aula39.heranca;
+package aula30.heranca;
 
 public class Jogador extends Pessoa{
 
