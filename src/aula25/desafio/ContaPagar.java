@@ -1,42 +1,17 @@
 package aula25.desafio;
 
-public class ContaPagar {
-    private String descricao;
-    private Double valor;
-    private String dataVencimento;
+public class ContaPagar extends Conta {
     private Fornecedor fornecedor;
-    private SituacaoConta situacaoConta;
 
     public ContaPagar() {
-        this.situacaoConta = SituacaoConta.PENDENTE;
+        super();
     }
 
     public ContaPagar(Fornecedor fornecedor, String descricao, Double valor, String dataVencimento) {
-        this();
+        super();
         this.fornecedor = fornecedor;
         this.descricao = descricao;
         this.valor = valor;
-        this.dataVencimento = dataVencimento;
-    }
-
-    public String getDescricao() {
-        return this.descricao;
-    }
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public Double getValor() {
-        return this.valor;
-    } 
-    public void setValor(Double valor) {
-        this.valor = valor;
-    }
-
-    public String getDataVencimento() {
-        return this.dataVencimento;
-    }
-    public void setDataVencimento(String dataVencimento) {
         this.dataVencimento = dataVencimento;
     }
 
@@ -45,10 +20,6 @@ public class ContaPagar {
     }
     public void setFornecedor(Fornecedor fornecedor) {
         this.fornecedor = fornecedor;
-    }
-
-    public SituacaoConta getSituacaoConta() {
-        return this.situacaoConta;
     }
 
     public void pagar() {
@@ -61,12 +32,5 @@ public class ContaPagar {
         System.out.println("Data vencimento: " + this.dataVencimento);
         System.out.println("Nome fornecedor: " + this.fornecedor.getNome());
         System.out.println("================================================");
-    }
-
-    public void cancelar() {
-        if (this.situacaoConta != SituacaoConta.PENDENTE)
-            System.out.println("Não se pode cancelar uma conta que esteja cancelada ou paga");
-        else
-            this.situacaoConta = SituacaoConta.CANCELADA;
     }
 }
