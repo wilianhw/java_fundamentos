@@ -1,4 +1,4 @@
 package aula25.desafio;
 
-public class Cliente extends Pessoa{
+public class Cliente extends Pessoa1 {
 }

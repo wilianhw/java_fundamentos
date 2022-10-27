@@ -1,6 +1,6 @@
 package aula30.heranca;
 
-public class Pessoa {
+public class Pessoa2 {
     protected String nome;
     protected int idade;
 

@@ -1,6 +1,6 @@
 package aula30.heranca;
 
-public class Jogador extends Pessoa{
+public class Jogador extends Pessoa2 {
 
     protected boolean aindaJoga = false;
 

@@ -1,6 +1,6 @@
 package aula25.desafio;
 
-public class ContaPagar extends Conta {
+public class ContaPagar extends Conta1 {
     private Fornecedor fornecedor;
 
     public ContaPagar() {
@@ -23,10 +23,10 @@ public class ContaPagar extends Conta {
     }
 
     public void pagar() {
-        if (this.situacaoConta != SituacaoConta.PENDENTE)
-            System.out.println("A conta só pode ser paga se a situação for " + SituacaoConta.PENDENTE);
+        if (this.situacaoConta != SituacaoConta1.PENDENTE)
+            System.out.println("A conta só pode ser paga se a situação for " + SituacaoConta1.PENDENTE);
         else
-            this.situacaoConta = SituacaoConta.PAGA;
+            this.situacaoConta = SituacaoConta1.PAGA;
         System.out.println("Descricao: " + this.descricao);
         System.out.println("Valor: " + this.valor);
         System.out.println("Data vencimento: " + this.dataVencimento);

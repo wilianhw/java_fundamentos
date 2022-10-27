@@ -1,6 +1,6 @@
 package aula25.desafio;
 
-public class ContaReceber extends Conta {
+public class ContaReceber extends Conta1 {
 
     public Cliente cliente;
 
