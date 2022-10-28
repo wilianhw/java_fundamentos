@@ -1,6 +1,6 @@
 package aula36.impressao;
 
-public interface Imprimivel {
+public interface Imprimivel1 {
     public String getCabelhoPagina();
     public String getCorpoPagina();
 }

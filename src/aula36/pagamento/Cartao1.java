@@ -1,6 +1,6 @@
 package aula36.pagamento;
 
-public class Cartao {
+public class Cartao1 {
 
     private String nomeTitular;
     private String numeroCartao;

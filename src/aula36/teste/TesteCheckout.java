@@ -1,10 +1,11 @@
 package aula36.teste;
 
+
 import aula36.caixa.Checkout;
-import aula36.caixa.Compra;
-import aula36.impressao.IImpressora;
-import aula36.impressao.impressoras.IImpressoraEpson;
-import aula36.pagamento.Cartao;
+import aula36.caixa.Compra1;
+import aula36.impressao.IImpressora1;
+import aula36.impressao.impressoras.IImpressora1Epson;
+import aula36.pagamento.Cartao1;
 import aula36.pagamento.IOperadora;
 import aula36.pagamento.operadoras.Cielo;
 
@@ -12,18 +13,18 @@ public class TesteCheckout {
 
     public static void main(String[] args) {
         IOperadora IOperadora = new Cielo();
-        IImpressora IImpressora = new IImpressoraEpson();
+        IImpressora1 IImpressora1 = new IImpressora1Epson();
 
-        Cartao cartao = new Cartao();
-        cartao.setNomeTitular("João");
-        cartao.setNumeroCartao("123");
+        Cartao1 cartao1 = new Cartao1();
+        cartao1.setNomeTitular("João");
+        cartao1.setNumeroCartao("123");
 
-        Compra compra = new Compra();
-        compra.setNomeCliente("João mendes");
-        compra.setNomeProduto("Banana");
-        compra.setValorTotal(5.5);
+        Compra1 compra1 = new Compra1();
+        compra1.setNomeCliente("João mendes");
+        compra1.setNomeProduto("Banana");
+        compra1.setValorTotal(5.5);
 
-        Checkout checkout = new Checkout(IOperadora, IImpressora);
-        checkout.fecharCompra(compra, cartao);
+        Checkout checkout = new Checkout(IOperadora, IImpressora1);
+        checkout.fecharCompra(compra1, cartao1);
     }
 }

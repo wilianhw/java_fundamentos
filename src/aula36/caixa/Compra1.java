@@ -1,9 +1,9 @@
 package aula36.caixa;
 
-import aula36.impressao.Imprimivel;
-import aula36.pagamento.Autorizavel;
+import aula36.impressao.Imprimivel1;
+import aula36.pagamento.Autorizavel1;
 
-public class Compra implements Autorizavel, Imprimivel {
+public class Compra1 implements Autorizavel1, Imprimivel1 {
 
     private Double valorTotal;
     private String nomeProduto;
