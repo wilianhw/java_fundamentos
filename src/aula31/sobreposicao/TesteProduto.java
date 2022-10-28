@@ -5,7 +5,7 @@ import java.util.Date;
 public class TesteProduto {
 
     public static void main(String[] args) {
-        ProdutoPerecivel produtoPerecivel = new ProdutoPerecivel();
+        Produto1Perecivel produtoPerecivel = new Produto1Perecivel();
 
         produtoPerecivel.descricao = "Sardinha";
         produtoPerecivel.data = new Date();

@@ -1,6 +1,6 @@
 package aula31.sobreposicao;
 
-public class Produto {
+public class Produto1 {
     protected String descricao;
 
     public void identificar() {
