@@ -24,12 +24,21 @@ public class ContaReceber extends Conta1 {
     }
 
     public void receber() {
-        System.out.println("Recebendo grana!!!");;
+        System.out.println("Recebendo grana!!!");
     }
 
     @Override
     public void cancelar() {
         if (this.valor > 50000)
             super.cancelar();
+    }
+
+    @Override
+    public void exibirDetalhes() {
+        System.out.println("Descrição: " + this.getDescricao());
+        System.out.println("Valor: " + this.getValor());
+        System.out.println("Situação: " + this.getSituacaoConta());
+        System.out.println("Data vencimento: " + this.getDataVencimento());
+        System.out.println("Nome cliente: " + this.getCliente().getNome());
     }
 }

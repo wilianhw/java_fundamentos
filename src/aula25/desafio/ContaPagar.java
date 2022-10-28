@@ -7,6 +7,15 @@ public class ContaPagar extends Conta1 {
         super();
     }
 
+    @Override
+    public void exibirDetalhes() {
+        System.out.println("Descrição: " + this.getDescricao());
+        System.out.println("Valor: " + this.getValor());
+        System.out.println("Situação: " + this.getSituacaoConta());
+        System.out.println("Data vencimento: " + this.getDataVencimento());
+        System.out.println("Nome fornecedor: " + this.getFornecedor().getNome());
+    }
+
     public ContaPagar(Fornecedor fornecedor, String descricao, Double valor, String dataVencimento) {
         super();
         this.fornecedor = fornecedor;
@@ -23,10 +32,10 @@ public class ContaPagar extends Conta1 {
     }
 
     public void pagar() {
-        if (this.situacaoConta != SituacaoConta1.PENDENTE)
-            System.out.println("A conta só pode ser paga se a situação for " + SituacaoConta1.PENDENTE);
+        if (this.situacaoConta != SituacaoConta2.PENDENTE)
+            System.out.println("A conta só pode ser paga se a situação for " + SituacaoConta2.PENDENTE);
         else
-            this.situacaoConta = SituacaoConta1.PAGA;
+            this.situacaoConta = SituacaoConta2.PAGA;
         System.out.println("Descricao: " + this.descricao);
         System.out.println("Valor: " + this.valor);
         System.out.println("Data vencimento: " + this.dataVencimento);

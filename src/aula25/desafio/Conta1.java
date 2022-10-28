@@ -1,13 +1,13 @@
 package aula25.desafio;
 
-public class Conta1 {
+public abstract class Conta1 {
     protected String descricao;
     protected Double valor;
     protected String dataVencimento;
-    protected SituacaoConta1 situacaoConta;
+    protected SituacaoConta2 situacaoConta;
 
     public Conta1() {
-        this.situacaoConta = SituacaoConta1.PENDENTE;
+        this.situacaoConta = SituacaoConta2.PENDENTE;
     }
 
     public String getDescricao() {
@@ -31,14 +31,16 @@ public class Conta1 {
         this.dataVencimento = dataVencimento;
     }
 
-    public SituacaoConta1 getSituacaoConta() {
+    public SituacaoConta2 getSituacaoConta() {
         return this.situacaoConta;
     }
 
     public void cancelar() {
-        if (this.situacaoConta != SituacaoConta1.PENDENTE)
+        if (this.situacaoConta != SituacaoConta2.PENDENTE)
             System.out.println("Não se pode cancelar uma conta que esteja cancelada ou paga");
         else
-            this.situacaoConta = SituacaoConta1.CANCELADA;
+            this.situacaoConta = SituacaoConta2.CANCELADA;
     }
+
+    public abstract void exibirDetalhes();
 }

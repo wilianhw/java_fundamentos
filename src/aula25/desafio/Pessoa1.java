@@ -1,6 +1,6 @@
 package aula25.desafio;
 
-public class Pessoa1 {
+public abstract class Pessoa1 {
 
     private String nome;
 
