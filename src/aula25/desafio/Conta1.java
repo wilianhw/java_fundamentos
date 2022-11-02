@@ -4,10 +4,10 @@ public abstract class Conta1 {
     protected String descricao;
     protected Double valor;
     protected String dataVencimento;
-    protected SituacaoConta2 situacaoConta;
+    protected SituacaoContaDesafio situacaoConta;
 
     public Conta1() {
-        this.situacaoConta = SituacaoConta2.PENDENTE;
+        this.situacaoConta = SituacaoContaDesafio.PENDENTE;
     }
 
     public String getDescricao() {
@@ -31,15 +31,14 @@ public abstract class Conta1 {
         this.dataVencimento = dataVencimento;
     }
 
-    public SituacaoConta2 getSituacaoConta() {
+    public SituacaoContaDesafio getSituacaoConta() {
         return this.situacaoConta;
     }
 
-    public void cancelar() {
-        if (this.situacaoConta != SituacaoConta2.PENDENTE)
-            System.out.println("Não se pode cancelar uma conta que esteja cancelada ou paga");
-        else
-            this.situacaoConta = SituacaoConta2.CANCELADA;
+    public void cancelar() throws OperacaoContaException {
+        if (this.situacaoConta != SituacaoContaDesafio.PENDENTE)
+            throw new OperacaoContaException("Não se pode cancelar uma conta que esteja cancelada ou paga");
+        this.situacaoConta = SituacaoContaDesafio.CANCELADA;
     }
 
     public abstract void exibirDetalhes();

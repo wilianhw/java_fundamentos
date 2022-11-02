@@ -1,5 +1,5 @@
 package aula25.desafio;
 
-public class Fornecedor extends Pessoa1 {
+public class Fornecedor extends PessoaDesafio {
 
 }

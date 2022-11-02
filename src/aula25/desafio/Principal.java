@@ -10,9 +10,9 @@ public class Principal {
         mercado.setNome("Mercado do João");
 
         // instanciando clientes
-        Cliente atacadista = new Cliente();
+        ClienteDesafio atacadista = new ClienteDesafio();
         atacadista.setNome("Triângulo Quadrado Atacadista");
-        Cliente telecom = new Cliente();
+        ClienteDesafio telecom = new ClienteDesafio();
         telecom.setNome("FoneNet Telecomunicações");
 
         // instanciando contas a pagar
@@ -30,6 +30,17 @@ public class Principal {
         contaReceber1.setValor(89500d);
         contaReceber1.setDataVencimento("23/05/2012");
         contaReceber1.setCliente(atacadista);
+
+        ContaReceber contaReceber = new ContaReceber();
+        contaReceber.setDescricao("Desenvolvimento de projeto de logística em Java");
+        contaReceber.setValor(0d);
+        contaReceber.setDataVencimento("23/05/2012");
+        contaReceber.setCliente(atacadista);
+        try {
+            contaReceber.receber();
+        } catch (OperacaoContaException e) {
+            System.out.println(e.getMessage());
+        }
 
         ContaReceber contaReceber2 = new ContaReceber(telecom, "Manutenção em sistema de conta online",
                 53200d, "13/05/2012");

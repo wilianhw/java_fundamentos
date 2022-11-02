@@ -1,6 +1,6 @@
 package aula25.desafio;
 
-public enum SituacaoConta2 {
+public enum SituacaoContaDesafio {
 
     PENDENTE,
     PAGA,
