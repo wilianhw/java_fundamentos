@@ -1,6 +1,6 @@
 package aula34.polimorfismo;
 
-public class ContaPoupanca extends Conta {
+public class ContaPolimorfismoPoupanca extends ContaPolimorfismo {
 
     private double rendimentos = 30;
 

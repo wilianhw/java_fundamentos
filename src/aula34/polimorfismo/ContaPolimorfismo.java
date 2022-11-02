@@ -1,6 +1,6 @@
 package aula34.polimorfismo;
 
-public class Conta {
+public class ContaPolimorfismo {
 
     protected double saldo;
 

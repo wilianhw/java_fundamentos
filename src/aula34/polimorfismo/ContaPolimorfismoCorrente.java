@@ -1,6 +1,6 @@
 package aula34.polimorfismo;
 
-public class ContaCorrente extends Conta {
+public class ContaPolimorfismoCorrente extends ContaPolimorfismo {
 
     private double limite = 1000;
 
